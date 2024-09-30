@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('img/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar .img img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: transparent;
+}
+
+.flex-container > div {
+    background-color: transparent;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.flex-item-1 {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    flex: 2; /* Adjust the number to increase/decrease the width of the second tile */
+}
+
+.flex-item-2 {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    flex: 4; /* Adjust the number to increase/decrease the width of the second tile */
+}
+
+.flex-item-3 {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    flex: 2; /* Adjust the number to increase/decrease the width of the second tile */
+}
+/* Add this to your existing style.css */
+
+/* Logo size adjustments */
+.team-flag {
+    width: 40px; /* Decrease width of team logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Card text adjustments */
+.card p {
+    margin: 5px 0; /* Reduce spacing between text elements */
+    font-size: 90%; /* Slightly smaller font size */
+    color: #e0e0e0;
+}
+
+/* Button size adjustments */
+.ticket-btn {
+    padding: 6px 12px; /* Smaller button padding */
+    font-size: 12px; /* Smaller font size for buttons */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .team-flag {
+        width: 30px; /* Further decrease logo size on small screens */
+    }
+
+    .card p {
+        font-size: 80%; /* Further reduce font size on small screens */
+        color: #000000;
+    }
+}
+
+
+/* Card Layout */
+.card {
+    display: flex; /* Flexbox for left-right layout */
+    justify-content: space-between; /* Space between the two sections */
+    align-items: center; /* Vertically center the content */
+    background-color: #e6e6e636;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Section (Match Info) */
+.card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    flex: 3;
+}
+
+.card-left h3 {
+    font-size: 20px;
+    margin-bottom: 4px; /* Reduce bottom margin */
+    color: #333;
+    line-height: 1.1; /* Reduce line height */
+}
+
+.card-left p {
+    font-size: 14px;
+    margin: 2px 0; /* Reduce top and bottom margins */
+    line-height: 1.2; /* Reduce line height */
+    color: #ffffff;
+
+}
+
+/* Right Section (Ticket Info) */
+.card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.card-right p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fefbfb;
+}
+
+/* Ticket Button */
+.ticket-btn {
+    padding: 8px 16px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ticket-btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+/**/
+
+
+

@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('img/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(17, 0, 0, 0.699);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 3px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+  
+    .navbar ul.active {
+        display: flex;
+    }
+  
+    .navbar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+  
+    .hamburger {
+        display: flex;
+    }
+  
+    .navbar .img img {
+        width: 80px;
+        height: 80px;
+    }
+  }
+  header {
+    background-color: #4caf4f65;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+
+}
+
+.container {
+    
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    background: linear-gradient(to right,#e23636 0%,#000000 100%);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.section {
+    background-color: #f5d0d048;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    background: linear-gradient(to right,#15165e 0%,#000000 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.section p {
+    font-size: 18px;
+    
+    color: #ffffff;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #9981ee4d;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-basis: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    background: linear-gradient(to right,#e23636 0%,#000000 100%);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    background: linear-gradient(to right,#e23636 0%,#000000 100%);
+    background-clip: text;
+    color: transparent;
+}
+@media (max-width: 768px) {
+    .team-member {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('img/wallpaperflare.com_wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+
+.footer {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(17, 0, 0, 0.699);
+  color: rgba(255, 255, 255, 0.692);
+  text-align: center;
+  padding: 3px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque background for contrast */
+  border-radius: 15px;
+  padding: 30px; /* Adequate padding for form spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Limit max width for better readability */
+  width: 100%; /* Responsive width */
+  margin: 20px auto; /* Center the form on the page */
+}
+
+.contact-container h1 {
+  margin-bottom: 20px; /* Space between title and inputs */
+  font-size: 24px; /* Larger font for the heading */
+  color: #333; /* Darker color for better readability */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Adequate padding */
+  margin-bottom: 15px; /* Space between inputs */
+  border: 1px solid #ccc; /* Light border for inputs */
+  border-radius: 5px; /* Slight rounding of corners */
+  font-size: 16px; /* Larger font size for readability */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.button {
+  text-align: center; /* Center the button */
+}
+
+.btn-55 {
+  background: linear-gradient(90deg, blue, red); /* Gradient background for button */
+  border: none; /* Remove default border */
+  color: white; /* Text color */
+  padding: 12px 30px; /* Padding for the button */
+  border-radius: 25px; /* Round the button */
+  cursor: pointer; /* Pointer on hover */
+  font-weight: bold; /* Bold text */
+  transition: background 0.3s ease; /* Transition effect */
+}
+
+.btn-55:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darken on hover */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar .img img {
+    width: 80px;
+    height: 80px;
+  }
+}

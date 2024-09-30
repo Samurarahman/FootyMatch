@@ -1,0 +1,55 @@
+CREATE TABLE match_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    team1 VARCHAR(100) NOT NULL,
+    team2 VARCHAR(100) NOT NULL,
+    venue VARCHAR(100) NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    seat_available INT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL
+);
+
+
+INSERT INTO match_info (team1, team2, venue, date, time, type, seat_available, price)
+VALUES
+    ('Bangladesh', 'Nepal', 'National Stadium', '2024-10-10', '15:30:00', 'Friendly', 300, 500),
+    ('Arsenal', 'Real Mardrid', 'Santiago Bernabéu Stadium, Spain', '2024-10-11', '12:30:00', 'UEFA Champions League', 50, 1200),
+    ('India ', 'Pakistan', 'Salt Lake Stadium, Kolkata', '2024-10-12', '14:00:00', 'International Friendly Match', 30, 400),
+    ('Barcelona ', 'PSG', 'Lluís Companys Olympic, Spain', '2024-10-15', '20:30:00', 'UEFA Champions League', 50, 600),
+    ('Brazil', 'Argentina', 'Maracanã, Rio de Janeiro', '2024-10-20', '12:30:00', 'International Friendly Match', 30, 2000),
+    ('Germany', 'France', 'Allianz Arena, Munich', '2024-10-21', '22:30:00', '', 850, 1500),
+    ('Manchester City', 'Manchester United', 'Etihad Stadium, England', '2024-10-22', '21:00:00', 'Premier League', 35, 1000),
+    ('Italy', 'Spain', 'San Siro, Milan', '2024-10-25', '13:30:00', 'International Friendly Match', 650, 850);
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+
+
+INSERT INTO user (fullname, email, password)
+VALUES
+    ('Samura Rahman', 'sam@gmail.com', 'sam1234'),
+    ('ohin', 'ohin@gmail.com', 'ohin1234'),
+    ('lia', 'lia@gmail.com', '1111');
+
+
+
+CREATE TABLE user_ticket (
+    ticket_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    match_id INT NOT NULL
+);
